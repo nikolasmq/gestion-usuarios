@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/include/footer/footer.component';
 import { HeaderComponent } from './components/include/header/header.component';
 import { MenuComponent } from './components/include/menu/menu.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [	
@@ -16,7 +18,10 @@ import { MenuComponent } from './components/include/menu/menu.component';
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="text-center">Registro de usuarios</h1>
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div>
+      <label for="documento">Documento</label>
+      <input name="documento" type="number" id="documento" [(ngModel)]="crear.documento">
+    </div>
+  </form>
+</div>
