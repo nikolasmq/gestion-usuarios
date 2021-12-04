@@ -11,6 +11,8 @@ import { PeticionesService } from '../../services/peticiones.service';
 })
 export class ListarComponent implements OnInit {
 
+  public users:any;
+
   constructor(
     private _peticionesService : PeticionesService
   ) { }
@@ -18,6 +20,7 @@ export class ListarComponent implements OnInit {
   ngOnInit() {
     this._peticionesService.getUser().subscribe(
       result =>{
+        this.users = result;
         console.log(result);
       },
       error => {

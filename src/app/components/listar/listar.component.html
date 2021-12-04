@@ -1,3 +1,20 @@
-<p>
-  listar works!
-</p>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Documento</th>
+    <th scope="col">Número</th>
+    <th scope="col">Tipo</th>
+    <th scope="col">Razon social</th>
+    <th scope="col">Monto anual</th>
+  </tr>
+  </thead>
+  <tbody>
+<tr *ngFor="let user of users; let i = index">
+  <td scope="row">{{ i + 1 }}</td>
+  <td scope="row">{{user.documento}}</td>
+  <td scope="row">{{user.nombres}}</td>
+  <td scope="row">{{user.tipoDocumento}}</td>
+  <td scope="row">{{user.razonSocial}}</td>
+  <td scope="row">{{user.ventasUltimoAnio}}</td>
+</tr>
