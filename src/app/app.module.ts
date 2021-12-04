@@ -11,6 +11,7 @@ import { FooterComponent } from './components/include/footer/footer.component';
 import { HeaderComponent } from './components/include/header/header.component';
 import { MenuComponent } from './components/include/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { ListarComponent } from './components/listar/listar.component';
 
 @NgModule({
   declarations: [	
@@ -18,7 +19,8 @@ import { HomeComponent } from './components/home/home.component';
       FooterComponent,
       HeaderComponent,
       MenuComponent,
-      HomeComponent
+      HomeComponent,
+      ListarComponent
    ],
   imports: [
     BrowserModule,
