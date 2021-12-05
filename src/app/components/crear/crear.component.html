@@ -1,1 +1,32 @@
-<h1>Hola</h1>
+<section>
+    <div>
+        <form [formGroup]="form" (submit)="send()">
+            <div class="form-control">
+                <label for="">Documento</label>
+                <input type="number" formControlName="documento">
+            </div>
+            <div class="form-control">
+                <label for="">Tipo de documento</label>
+                <select name="tipo" formControlName="tipo">
+                    <option value="CC">Cedula</option>
+                    <option value="NIT">Nit</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="">Razon social</label>
+                <input type="text" formControlName="razonSocial">
+            </div>
+            <div class="form-control">
+                <label for="">Nombre</label>
+                <input type="text" formControlName="nombres">
+            </div>
+            <div class="form-control">
+                <label for="">Ventas anuales</label>
+                <input type="number" formControlName="ventasAnueles">
+            </div>
+            <div>
+                <button>Registrar</button>
+            </div>
+        </form>
+    </div>
+</section>

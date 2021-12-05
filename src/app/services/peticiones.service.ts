@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+// import { ListarComponent } from '../components/listar/listar.component';
+// import { Component, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -15,4 +17,5 @@ export class PeticionesService {
   getUser(): Observable<any>{
     return this._http.get(this.url+'user')
   }
+  
 }

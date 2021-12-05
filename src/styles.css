@@ -1,7 +1,6 @@
 body{
     background-color: #d6d6d6;
 }
-
 footer.text-center {
     background-color:#fff;
     position: fixed;
@@ -18,4 +17,12 @@ footer.text-center {
 }
 .active{
     background-color: gray;
+}
+div#buscar {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
 }
