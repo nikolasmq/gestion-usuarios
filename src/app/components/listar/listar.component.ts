@@ -12,7 +12,6 @@ import { PeticionesService } from '../../services/peticiones.service';
 export class ListarComponent implements OnInit {
 
   public users:any;
-  public docId:any;
 
   constructor(
     private _peticionesService : PeticionesService
@@ -26,7 +25,7 @@ export class ListarComponent implements OnInit {
       },
       error => {
         console.log(<any>error);
-        
+
       }
     )
   }

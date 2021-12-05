@@ -1,25 +1,29 @@
-<h1 class="text-center">{{title}}</h1>
-<div  class="form col-5 my-5" id="form">
-    <form [formGroup]="formRegister" (submit)="send()">
-            <label class="form-control">Documento</label>
-            <input type="number" class="form-control" placeholder="Número de documento" formControlName="documento">
+<div class="card">
+  <h1 class="text-center my-3 card-title">{{title}}</h1>
+  <div  class="form col-4 my-5" id="form">
+      <form [formGroup]="formRegister" (submit)="send(formRegister)">
 
-            <label class="form-control">Tipo de documento</label>
-            <select name="tipo" class="form-control" formControlName="tipo">
-                <option value="">Seleccione el tipo de documento</option>
-                <option value="CC">Cedula</option>
-                <option value="NIT">Nit</option>
-            </select>
+              <label class="form-control">Documento</label>
+              <input type="number" class="form-control" placeholder="Número de documento" formControlName="documento">
 
-            <label class="form-control">Razon social</label>
-            <input type="text" class="form-control" placeholder="Razon Social" formControlName="razonSocial">
+              <label class="form-control">Tipo de documento</label>
+              <select name="tipo" class="form-control" formControlName="tipo">
+                  <option value="">Seleccione el tipo de documento</option>
+                  <option value="CC">Cedula</option>
+                  <option value="NIT">Nit</option>
+              </select>
 
-            <label class="form-control">Nombre</label>
-            <input type="text" class="form-control" placeholder="Nombres" formControlName="nombres">
+              <label class="form-control">Razon social</label>
+              <input type="text" class="form-control" placeholder="Razon Social" formControlName="razonSocial">
 
-            <label class="form-control">Ventas anuales</label>
-            <input type="number" class="form-control" placeholder="Ventas anuales" formControlName="ventasAnueles">
+              <label class="form-control">Nombre</label>
+              <input type="text" class="form-control" placeholder="Nombres" formControlName="nombres">
 
-            <button class="btn btn-primary">Registrar</button>
-    </form>
+              <label class="form-control">Ventas anuales</label>
+              <input type="number" class="form-control" placeholder="Ventas anuales" formControlName="ventasAnueles">
+
+              <button class="btn btn-primary my-2" [disabled]="formRegister.invalid">Registrar</button>
+      </form>
+  </div>
 </div>
+
