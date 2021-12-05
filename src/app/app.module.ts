@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from 'src/app/app.routing';
 import { HttpClientModule} from '@angular/common/http';
 
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,21 +15,22 @@ import { ListarComponent } from './components/listar/listar.component';
 import { CrearComponent } from './components/crear/crear.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       FooterComponent,
       HeaderComponent,
       MenuComponent,
       HomeComponent,
       ListarComponent,
-      CrearComponent
+      CrearComponent,
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    routing
+    routing,
+    ReactiveFormsModule
   ],
   providers: [
     appRoutingProviders

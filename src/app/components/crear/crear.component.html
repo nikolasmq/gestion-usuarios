@@ -1,32 +1,25 @@
-<section>
-    <div>
-        <form (submit)="send()">
-            <div class="form-control">
-                <label for="">Documento</label>
-                <input type="number" formControlName="documento">
-            </div>
-            <div class="form-control">
-                <label for="">Tipo de documento</label>
-                <select name="tipo" formControlName="tipo">
-                    <option value="CC">Cedula</option>
-                    <option value="NIT">Nit</option>
-                </select>
-            </div>
-            <div class="form-control">
-                <label for="">Razon social</label>
-                <input type="text" formControlName="razonSocial">
-            </div>
-            <div class="form-control">
-                <label for="">Nombre</label>
-                <input type="text" formControlName="nombres">
-            </div>
-            <div class="form-control">
-                <label for="">Ventas anuales</label>
-                <input type="number" formControlName="ventasAnueles">
-            </div>
-            <div>
-                <button>Registrar</button>
-            </div>
-        </form>
-    </div>
-</section>
+<h1 class="text-center">{{title}}</h1>
+<div  class="form col-5 my-5" id="form">
+    <form [formGroup]="formRegister" (submit)="send()">
+            <label class="form-control">Documento</label>
+            <input type="number" class="form-control" placeholder="Número de documento" formControlName="documento">
+
+            <label class="form-control">Tipo de documento</label>
+            <select name="tipo" class="form-control" formControlName="tipo">
+                <option value="">Seleccione el tipo de documento</option>
+                <option value="CC">Cedula</option>
+                <option value="NIT">Nit</option>
+            </select>
+
+            <label class="form-control">Razon social</label>
+            <input type="text" class="form-control" placeholder="Razon Social" formControlName="razonSocial">
+
+            <label class="form-control">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombres" formControlName="nombres">
+
+            <label class="form-control">Ventas anuales</label>
+            <input type="number" class="form-control" placeholder="Ventas anuales" formControlName="ventasAnueles">
+
+            <button class="btn btn-primary">Registrar</button>
+    </form>
+</div>

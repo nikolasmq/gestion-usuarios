@@ -26,3 +26,7 @@ div#buscar {
     padding: 2rem;
     border-radius: 20px;
 }
+div#form {
+  margin: 0 auto;
+  text-align: center;
+}

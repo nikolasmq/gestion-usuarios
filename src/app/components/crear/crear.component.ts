@@ -8,13 +8,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CrearComponent implements OnInit {
   title = "Formulario de registro para usuarios";
-  
-  public form!: FormGroup;
+
+  public formRegister: FormGroup | any;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group( {
+    this.formRegister = this.formBuilder.group( {
       documento: ['', [Validators.required, Validators.email]],
       tipo: ['', [Validators.required]],
       nombres: ['', [Validators.required]],
@@ -23,8 +23,8 @@ export class CrearComponent implements OnInit {
       } )
   }
   send():any{
-    console.log(this.form.value);
-    
+    console.log(this.formRegister.value);
+
   }
 
 }
